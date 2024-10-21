@@ -5,8 +5,8 @@
 
       <tr>
         <th>ID</th>
-      <th>Stadium Name</th>
-      <th>Stadium Capacity</th>
+      <th>Name</th>
+      <th>Office</th>
     </thead>
       </tr>
   
