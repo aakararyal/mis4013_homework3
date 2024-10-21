@@ -1,7 +1,7 @@
 <?php
 
 require_once("util-db.php");
-require_once("model-coaches.php");
+require_once("model-coaches-with-players.php");
 
 
 $pageTitle = "Coaches with Players";
