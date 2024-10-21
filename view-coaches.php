@@ -20,7 +20,7 @@ while ($coach = $coaches->fetch_assoc()) {
     <td><?php echo $coach['coaches_id']; ?></td>
     <td><?php echo $coach['coaches_name']; ?></td>
     <td><?php echo $coach['office_location']; ?></td>
-  <td> <a href = "coaches-and-players.php?id=<?php echo $coach['coaches_id']; ?>">Football Relations</td>
+  <td> <a href = "coaches-with-players.php?id=<?php echo $coach['coaches_id']; ?>">Football Relations</td>
   </tr>
   <?php
 }
