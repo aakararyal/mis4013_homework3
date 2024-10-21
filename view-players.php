@@ -6,7 +6,7 @@
       <tr>
         <th>ID</th>
       <th>Name</th>
-      <th>Office</th>
+      <th>Position</th>
     </thead>
       </tr>
   
