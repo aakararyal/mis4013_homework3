@@ -30,7 +30,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="coaches-with-players.php">Coaches and Players</a>
+          <a class="nav-link" href="players-with-teams.php">Players and Teams</a>
         </li> 
       </ul>
      
