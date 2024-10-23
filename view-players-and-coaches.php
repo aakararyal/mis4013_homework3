@@ -17,8 +17,8 @@ while ($coach = $coaches->fetch_assoc()) {
     while ($playe = $playersc->fetch_assoc()) {
 
       ?>
-          <li class="list-group-item"><?php echo $coach['office_location']; ?> </li>
-   
+             <li class="list-group-item"><?php echo $coach['office_location']; ?> - <?php echo $coach['nfl_team']; ?> - <?php echo $coach['division']; ?> </li>
+
       
         <?php
       
