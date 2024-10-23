@@ -1,4 +1,4 @@
-<h1>Players and Coaches</h1>
+<h1>Coaches and Former Player Teams</h1>
 <div class="card-group">
   
 <?php
