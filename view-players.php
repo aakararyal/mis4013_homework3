@@ -7,6 +7,7 @@
         <th>ID</th>
       <th>Name</th>
       <th>Position</th>
+        <th></th>
     </thead>
       </tr>
   
@@ -19,7 +20,13 @@ while ($player = $players->fetch_assoc()) {
     <td><?php echo $player['players_id']; ?></td>
     <td><?php echo $player['player_name']; ?></td>
     <td><?php echo $player['player_position']; ?></td>
-
+  <td>
+    <form method = "post" action = "players-by-team.php">
+      <input type = "hidden" name = "cid" value = "<?php echo $player['players_id']; ?>">
+    <button type="submit" class="btn btn-primary">Player's NFL Teams</button>
+  
+</form>
+  </td>
   </tr>
   <?php
 }
