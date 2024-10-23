@@ -26,6 +26,7 @@
                 <label for="cPosition" class="form-label">Player position</label>
                 <input type="text" class="form-control" id="cPosition" name ="cPosition">
               </div>
+                <input type="hidden" name = "actionType" value="Add">
               <button type="submit" class="btn btn-primary">Save</button>
             </form>
       </div>
