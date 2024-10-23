@@ -20,10 +20,20 @@ echo '<div class = "alert alert-success" role = "alert"> Player added.</div>"';
             
       break;
 
+ case "Edit":
+        if (updatePlayer($_POST['cName'], $_POST ['cPosition'], $_POST['cid'])) {
+
+echo '<div class = "alert alert-success" role = "alert"> Player edited.</div>"';
+        } else {
+                echo '<div class = "alert alert-danger" role = "alert"> Error.</div>';
+        }
+            
+      break;
+        
          case "Delete":
         if (deletePlayer($_POST['cid'])){
 
-            echo '<div class = "alert alert-success" role = "alert"> Course deleted.</div>';
+            echo '<div class = "alert alert-success" role = "alert"> Player deleted.</div>';
         } else {
                 echo '<div class = "alert alert-danger" role = "alert"> Error.</div>';
         }
