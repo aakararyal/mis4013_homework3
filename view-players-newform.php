@@ -20,11 +20,11 @@
         <form method = "post" action = "">
               <div class="mb-3">
                 <label for="cName" class="form-label">Player name</label>
-                <input type="email" class="form-control" id="cName" name ="cName">
+                <input type="text" class="form-control" id="cName" name ="cName">
               </div>
              <div class="mb-3">
                 <label for="cPosition" class="form-label">Player position</label>
-                <input type="email" class="form-control" id="cPosition" name ="cPosition">
+                <input type="text" class="form-control" id="cPosition" name ="cPosition">
               </div>
               <button type="submit" class="btn btn-primary">Save</button>
             </form>
