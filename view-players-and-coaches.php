@@ -9,18 +9,22 @@ while ($coach = $coaches->fetch_assoc()) {
     <div class="card-body">
       <h5 class="card-title"><?php echo $coach['coaches_name']; ?></h5>
       <p class="card-text">
+
+    <ul class ="list-group">
+        
   <?php
     $playersc = selectPlayersAndCoaches( $coach['coaches_id']);
     while ($playe = $playersc->fetch_assoc()) {
 
       ?>
-
+          <li class="list-group-item"><?php echo $coach['coaches_name']; ?> - <?php echo $coach['office_location']; ?> - <?php echo $coach['nfl_team']; ?> - <?php echo $coach['division']; ?> /li>
+        
         <?php
       
     }
 
   ?>
-      
+    </ul>
       </p>
       <p class="card-text"><small class="text-body-secondary">Location: <?php echo $coach['office_location']; ?></small></p>
     </div>
