@@ -26,7 +26,7 @@ function insertPlayer($cName, $cPosition) {
     }
 }
 
-function updateCourse($cName, $cPosition, $cid) {
+function updatePlayer($cName, $cPosition, $cid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `players` set `player_name` = ?, `player_position` = ? where players_id = ?");
