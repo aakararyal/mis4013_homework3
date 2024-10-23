@@ -13,7 +13,7 @@ while ($coach = $coaches->fetch_assoc()) {
     <ul class ="list-group">
         
   <?php
-    $playersc = selectCoaches( $coach['coaches_id']);
+    $playersc = selectCoachesWithPlayers( $coach['coaches_id']);
     while ($playe = $playersc->fetch_assoc()) {
 
       ?>
