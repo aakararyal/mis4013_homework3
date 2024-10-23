@@ -21,7 +21,7 @@
         <form method = "post" action = "">
               <div class="mb-3">
                 <label for="cName<?php echo $player['players_id']; ?>" class="form-label">Player name</label>
-                <input type="text" class="form-control" id="cName<?php echo $player['players_id']; ?>" name ="cName" value = "<?php echo $player['players_name']; ?>">
+                <input type="text" class="form-control" id="cName<?php echo $player['players_id']; ?>" name ="cName" value = "<?php echo $player['player_name']; ?>">
               </div>
              <div class="mb-3">
                 <label for="cPosition<?php echo $player['players_id']; ?>" class="form-label">Player position</label>
