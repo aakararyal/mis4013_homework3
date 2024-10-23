@@ -5,8 +5,8 @@
 
       <tr>
         <th>ID</th>
-      <th>Coach Name</th>
-      <th>Office Location</th>
+      <th>Player Name</th>
+      <th>Seasons</th>
          <th>NFL Team</th>
          <th>Division</th>
     </thead>
