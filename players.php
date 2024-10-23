@@ -21,9 +21,9 @@ echo '<div class = "alert alert-success" role = "alert"> Player added.</div>"';
       break;
 
          case "Delete":
-        if (deletePlayer($_POST['cid]) {
+        if (deletePlayer($_POST['cid']) {
 
-echo '<div class = "alert alert-success" role = "alert"> Course deleted.</div>"';
+            echo '<div class = "alert alert-success" role = "alert"> Course deleted.</div>';
         } else {
                 echo '<div class = "alert alert-danger" role = "alert"> Error.</div>';
         }
