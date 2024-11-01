@@ -17,7 +17,7 @@ function insertCoaches($coName, $coLocation) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `coaches` (`coaches_name`, `office_location`) VALUES (?, ?) ");
-        $stmt->bind_param(ss, $coName, $coLocation);
+        $stmt->bind_param("ss", $coName, $coLocation);
         $success = $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
