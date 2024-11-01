@@ -20,12 +20,13 @@ function insertCoaches($coName, $coLocation) {
         $stmt->bind_param("ss", $coName, $coLocation);
         $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
+
 
 function updateCoaches($coName, $coLocation, $coid) {
     try {
