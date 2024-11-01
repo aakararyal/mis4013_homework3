@@ -13,4 +13,50 @@ function selectCoaches() {
     }
 }
 
+function insertCoaches($coName, $coLocation) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `coaches` (`coaches_name`, `office_location`) VALUES (?, ?) ");
+        $stmt->bind_param(ss, $coName, $coLocation);
+        $success = $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function updateCoaches($coName, $coLocation, $coid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `coaches` set `coaches_name` = ?, `office_location` = ? where coaches_id = ?");
+        $stmt->bind_param(ssi, $coName, $coLocation, $coid);
+        $success = $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function deleteCoaches($coid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from coaches where coaches_id =? ");
+        $stmt->bind_param("i", $coid);
+        $success = $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 ?>
