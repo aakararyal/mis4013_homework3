@@ -19,7 +19,6 @@ function insertCoaches($coName, $coLocation) {
         $stmt = $conn->prepare("INSERT INTO `coaches` ( `coaches_name`, `office_location`) VALUES (?, ?) ");
         $stmt->bind_param("ss", $coName, $coLocation);
         $success = $stmt->execute();
-        $result = $stmt->get_result();
         $conn->close();
         return $result;
     } catch (Exception $e) {
