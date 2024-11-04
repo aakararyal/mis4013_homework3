@@ -10,7 +10,11 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
       case "Add";
-        insertCoaches($_POST['coName'], $_POST['coLocation']);
+        if (insertCoaches($_POST['coName'], $_POST['coLocation'])) {
+            echo '<div class="alert alert-success" role="alert"> Coach added. </div>"';
+        } else {
+             echo '<div class="alert alert-danger" role="alert"> Error. </div>"';
+        }
         break;
     }
   
