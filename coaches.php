@@ -11,9 +11,9 @@ if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
       case "Add";
         if (insertCoaches($_POST['coName'], $_POST['coLocation'])) {
-            echo '<div class="alert alert-success" role="alert"> Coach added. </div>"';
+            echo '<div class="alert alert-success" role="alert"> Coach added. </div>';
         } else {
-             echo '<div class="alert alert-danger" role="alert"> Error. </div>"';
+             echo '<div class="alert alert-danger" role="alert"> Error. </div>';
         }
         break;
     }
