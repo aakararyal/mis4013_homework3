@@ -33,7 +33,14 @@ const d = new Date("2024-11-05");
 document.getElementById("examplenov").innerHTML = d;
 </script>
 
- 
+ <h3>All SEC Conferences</h3>
+
+<p id="demo"></p>
+
+<script>
+const conferences = new Array("SEC ", " Big 10 ", " ACC ", " Big 12 ");
+document.getElementById("demo").innerHTML = conferences;
+</script>
 
 <?php
 
