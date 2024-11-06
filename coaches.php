@@ -42,6 +42,21 @@ const conferences = new Array("SEC ", " Big 10 ", " ACC ", " Big 12 ");
 document.getElementById("demo").innerHTML = conferences;
 </script>
 
+<h3>Teams in Big 10 Using a Map Search</h3>
+
+<p id="newTeams"></p>
+
+<script>
+const midwest = new Map([
+  ["Michigan", 145],
+  ["Ohio State", 134],
+  ["Indiana", 137]
+]);
+
+let teams = midwest.get("Michigan");
+document.getElementById("newTeams").innerHTML = teams + " is the number of years Michigan has been in CFB.";
+</script>
+    
 <?php
 
 require_once("util-db.php");
