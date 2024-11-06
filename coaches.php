@@ -1,9 +1,8 @@
 
 <html>
 <body>
-<p> Month Currently: </p>
     <script>
-document.body.style.backgroundColor = "red";
+document.body.style.backgroundColor = "lightblue";
 
 </script>
 
@@ -25,6 +24,14 @@ function myFunction() {
 }
 </script>
 
+<h2>Date Website Made</h2>
+
+<p id="examplenov"></p>
+
+<script>
+const d = new Date("2024-11-05");
+document.getElementById("examplenov").innerHTML = d;
+</script>
 
  
 
