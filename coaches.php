@@ -1,3 +1,11 @@
+
+<html>
+<body>
+<script>
+document.body.style.backgroundColor = "red";
+</script>
+    
+
 <?php
 
 require_once("util-db.php");
@@ -23,3 +31,5 @@ $coaches = selectCoaches();
 include "view-coaches.php";
 include "view-footer.php";
   ?>
+</body>
+</html>
