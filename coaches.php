@@ -6,7 +6,27 @@
 document.body.style.backgroundColor = "red";
 
 </script>
-    
+
+
+<p>Click the button to swap text</p>
+
+<p><button onclick="myFunction()">Click Here!</button></p>
+
+<div id="newDiv">Places</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("newDiv");
+  if (x.innerHTML === "Places") {
+    x.innerHTML = "New Information";
+  } else {
+    x.innerHTML = "Places";
+  }
+}
+</script>
+
+
+ 
 
 <?php
 
