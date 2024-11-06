@@ -5,12 +5,6 @@
     <script>
 document.body.style.backgroundColor = "red";
 
-
-  <! --  source: https://www.w3schools.com/jsref/jsref_getutcmonth.asp-->  
-
-   const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const d = new Date()
-let month = month[d.getUTCMonth()];
 </script>
     
 
