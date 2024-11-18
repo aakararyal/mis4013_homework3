@@ -32,7 +32,11 @@ function insertCoaches($coName, $coLocation) {
 function updateCoaches($coName, $coLocation, $coid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `coaches` set `coaches_name` = ?, `office_location` = ? where coaches_id = ?");
+        $stmt = $conn->prepare("UPDATE `coaches` SET `coaches_name` = ?, `office_location` = ? WHERE `coaches_id` = ?;");
+
+
+
+        
         $stmt->bind_param("ssi", $coName, $coLocation, $coid);
         $success = $stmt->execute();
         $result = $stmt->get_result();
