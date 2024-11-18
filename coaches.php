@@ -81,7 +81,8 @@ if (isset($_POST['actionType'])) {
         } else {
              echo '<div class="alert alert-danger" role="alert"> Error. </div>';
         }
-        break; case "Delete";
+        break; 
+case "Delete";
         if (deleteCoaches($_POST['coid'])) {
             echo '<div class="alert alert-success" role="alert"> Coach deleted. </div>';
         } else {
