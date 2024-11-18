@@ -75,7 +75,13 @@ if (isset($_POST['actionType'])) {
              echo '<div class="alert alert-danger" role="alert"> Error. </div>';
         }
         break;
-    case "Delete";
+   case "Edit";
+        if (updateCoaches($_POST['coName'], $_POST['coLocation'], $_POST['coid'])) {
+            echo '<div class="alert alert-success" role="alert"> Coach edited. </div>';
+        } else {
+             echo '<div class="alert alert-danger" role="alert"> Error. </div>';
+        }
+        break; case "Delete";
         if (deleteCoaches($_POST['coid'])) {
             echo '<div class="alert alert-success" role="alert"> Coach deleted. </div>';
         } else {
