@@ -36,7 +36,9 @@ while ($coach = $coaches->fetch_assoc()) {
     <td><?php echo $coach['office_location']; ?></td>
 
 <td>
-  
+  <?php
+        include "view-coaches-editform.php";
+?>  
 </td>
 
     <td>
