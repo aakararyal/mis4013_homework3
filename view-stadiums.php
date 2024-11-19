@@ -35,7 +35,9 @@ while ($stadium = $stadiums->fetch_assoc()) {
     <td><?php echo $stadium['staidum_capacity']; ?></td>
   
     <td>
-      
+  <?php
+      include "view-stadiums-editform.php";
+?>
     </td>
     
   <td>
