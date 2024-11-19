@@ -31,7 +31,7 @@ function updateStadiums($sName, $sCap, $sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `stadiums` set `stadium_name` = ?, `staidum_capacity` = ?  where stadium_id = ?");
-        $stmt->bind_param("ss", $sName, $sCap, $sid);
+        $stmt->bind_param("ssi", $sName, $sCap, $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
