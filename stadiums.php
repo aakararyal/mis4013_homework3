@@ -12,8 +12,12 @@ if (isset($_POST['actionType']))
 {
   switch ($_POST['actionType']) {
     case "Add":
-    insertStadiums($_POST['sName'], $_POST['sCap']);
-    break;
+    if (insertStadiums($_POST['sName'], $_POST['sCap'])) {
+      echo '<div class="alert alert-success" role="alert">Stadium added. </div>';
+    } else {
+       echo '<div class="alert alert-danger" role="alert">Error. </div>';
+    }
+      break;
   }
 
 }
