@@ -43,7 +43,7 @@
      
              </div>
          <div class="mb-3">
-               <label for="division" class="form-label">Divison:</label>
+               <label for="division" class="form-label">Division:</label>
                <input type="text" class="form-control" id="division" name = "division">
      
              </div>
