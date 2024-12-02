@@ -37,6 +37,7 @@
                <input type="text" class="form-control" id="fDiv" name = "fDiv">
      
              </div>
+         <input type = "hidden" name = "actionType" value = "Add">
              <button type="submit" class="btn btn-primary">Save</button>
            </form>
       </div>
