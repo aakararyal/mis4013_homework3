@@ -10,15 +10,14 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
         case "Add":
-            insertFootball($_POST['fName'], $_POST['fCity'], $_POST['fNFL'], $_POST['fDiv']);
-            break;
-       # case "Edit":
-         #   updateFootball($_POST['football_id'], $_POST['coach_id'], $_POST['player_id'], $_POST['stadium_id'], $_POST['nfl_team'], $_POST['seasons'], $_POST['division']);
-           # break;
-       # case "Delete":
-         #  deleteFootball($_POST['football_id']);
-          #  break;
-   # }
+        
+           if(insertFootball($_POST['cid'], $_POST['pid'], $_POST['sid'], $_POST['nfl_team'], $_POST['seasons'], $_POST['division']))
+           {
+                echo '<div class = "alert alert-success" role = "alert"> Entry added.</div>';
+           } else {
+                 echo '<div class = "alert alert-danger" role = "alert"> Error adding entry.</div>';
+           }
+               break;
 }
 
 
