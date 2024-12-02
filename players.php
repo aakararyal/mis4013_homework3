@@ -1,3 +1,9 @@
+<html>
+<body>
+    <script>
+document.body.style.backgroundColor = "lightblue";
+
+</script>
 <?php
 
 require_once("util-db.php");
@@ -47,3 +53,6 @@ $players = selectPlayers();
 include "view-players.php";
 include "view-footer.php";
   ?>
+
+</body>
+</html>
