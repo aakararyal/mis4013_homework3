@@ -18,25 +18,37 @@
       <div class="modal-body">
         <form method = "post" action = "">
              <div class="mb-3">
-               <label for="fName" class="form-label">Coach Name</label>
-               <input type="text" class="form-control" id="FName" name = "fName">
+               <label for="cid" class="form-label">Coach ID</label>
+               <input type="number" class="form-control" id="cid" name = "cid">
      
              </div>
              <div class="mb-3">
-               <label for="fCity" class="form-label">City</label>
-               <input type="text" class="form-control" id="fCity" name = "fCity">
+               <label for="pid" class="form-label">Player ID</label>
+               <input type="number" class="form-control" id="pid" name = "pid">
      
              </div>
          <div class="mb-3">
-               <label for="fNFL" class="form-label">NFL Team</label>
-               <input type="text" class="form-control" id="fNFL" name = "fNFL">
+               <label for="sid" class="form-label">Stadium ID:</label>
+               <input type="number" class="form-control" id="sid" name = "sid">
      
              </div>
          <div class="mb-3">
-               <label for="fDiv" class="form-label">NFL Division</label>
-               <input type="text" class="form-control" id="fDiv" name = "fDiv">
+               <label for="nfl_team" class="form-label">NFL Team:</label>
+               <input type="text" class="form-control" id="nfl_team" name = "nfl_team">
      
              </div>
+        <div class="mb-3">
+               <label for="seasons" class="form-label">Seasons:</label>
+               <input type="text" class="form-control" id="seasons" name = "seasons">
+     
+             </div>
+         <div class="mb-3">
+               <label for="division" class="form-label">Divison:</label>
+               <input type="text" class="form-control" id="division" name = "division">
+     
+             </div>
+
+         
          <input type = "hidden" name = "actionType" value = "Add">
              <button type="submit" class="btn btn-primary">Save</button>
            </form>
