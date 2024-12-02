@@ -1,3 +1,9 @@
+<html>
+<body>
+    <script>
+document.body.style.backgroundColor = "lightblue";
+
+</script>
 <?php
 $pageTitle = "Home";
 include "view-header.php";
@@ -6,3 +12,5 @@ include "view-header.php";
    <?php
   include "view-footer.php";
   ?>
+</body>
+</html>
