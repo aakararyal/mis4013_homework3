@@ -18,13 +18,23 @@
       <div class="modal-body">
         <form method = "post" action = "">
              <div class="mb-3">
-               <label for="fNumber" class="form-label">Football Number</label>
-               <input type="text" class="form-control" id="fNumber" name = "fNumber">
+               <label for="fName" class="form-label">Coach Name</label>
+               <input type="text" class="form-control" id="FName" name = "fName">
      
              </div>
              <div class="mb-3">
-               <label for="fInfo" class="form-label">Football Information</label>
-               <input type="text" class="form-control" id="fNumber" name = "fInfo">
+               <label for="fCity" class="form-label">City</label>
+               <input type="text" class="form-control" id="fCity" name = "fCity">
+     
+             </div>
+         <div class="mb-3">
+               <label for="fNFL" class="form-label">NFL Team</label>
+               <input type="text" class="form-control" id="fNFL" name = "fNFL">
+     
+             </div>
+         <div class="mb-3">
+               <label for="fDiv" class="form-label">NFL Division</label>
+               <input type="text" class="form-control" id="fDiv" name = "fDiv">
      
              </div>
              <button type="submit" class="btn btn-primary">Save</button>
