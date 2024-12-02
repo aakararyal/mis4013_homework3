@@ -18,7 +18,7 @@ if (isset($_POST['actionType'])) {
        # case "Delete":
          #  deleteFootball($_POST['football_id']);
           #  break;
-    }
+   # }
 }
 
 
