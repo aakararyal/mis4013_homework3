@@ -24,22 +24,22 @@
              </div>
              <div class="mb-3">
                <label for="pid<?php echo $playe['football_id']; ?>" class="form-label">Player ID</label>
-               <input type="number" class="form-control" id="pid<?php echo $playe['football_id']; ?>" name = "pid" value = "<?php echo $playe['players_id']; ?>">
+               <input type="number" class="form-control" id="pid<?php echo $playe['football_id']; ?>" name = "pid" value = "<?php echo $playe['football_id']; ?>">
      
              </div>
          <div class="mb-3">
                <label for="sid<?php echo $playe['football_id']; ?>" class="form-label">Stadium ID:</label>
-               <input type="number" class="form-control" id="sid<?php echo $playe['football_id']; ?>" name = "sid" value = "<?php echo $playe['stadium_id']; ?>">
+               <input type="number" class="form-control" id="sid<?php echo $playe['football_id']; ?>" name = "sid" value = "<?php echo $playe['football_id']; ?>">
      
              </div>
          <div class="mb-3">
                <label for="nfl_team<?php echo $playe['football_id']; ?>" class="form-label">NFL Team:</label>
-               <input type="text" class="form-control" id="nfl_team<?php echo $playe['football_id']; ?>" name = "nfl_team" value = "<?php echo $playe['nfl_team']; ?>">
+               <input type="text" class="form-control" id="nfl_team<?php echo $playe['football_id']; ?>" name = "nfl_team" value = "<?php echo $playe['football_id']; ?>">
      
              </div>
         <div class="mb-3">
                <label for="seasons<?php echo $playe['football_id']; ?>" class="form-label">Seasons:</label>
-               <input type="text" class="form-control" id="seasons<?php echo $playe['football_id']; ?>" name = "seasons" value = "<?php echo $playe['seasons']; ?>">
+               <input type="text" class="form-control" id="seasons<?php echo $playe['football_id']; ?>" name = "seasons" value = "<?php echo $playe['football_id']; ?>">
      
              </div>
          <div class="mb-3">
