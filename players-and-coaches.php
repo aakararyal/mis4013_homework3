@@ -28,9 +28,9 @@ if (isset($_POST['actionType'])) {
         
            if(deleteFootball($_POST['fid']))
            {
-                echo '<div class = "alert alert-success" role = "alert"> Entry added.</div>';
+                echo '<div class = "alert alert-success" role = "alert"> Entry deleted.</div>';
            } else {
-                 echo '<div class = "alert alert-danger" role = "alert"> Error adding entry.</div>';
+                 echo '<div class = "alert alert-danger" role = "alert"> Error deleting entry.</div>';
            }
                break;
 }
