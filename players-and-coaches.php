@@ -24,6 +24,14 @@ if (isset($_POST['actionType'])) {
                  echo '<div class = "alert alert-danger" role = "alert"> Error adding entry.</div>';
            }
                break;
+        case "Edit":
+                if (updateFootball($_POST['fid'], $_POST['cid'], $_POST['pid'], $_POST['sid'], $_POST['nfl_team'], $_POST['seasons'], $_POST['division'])) {
+                    echo '<div class="alert alert-success" role="alert">Entry edited.</div>';
+                } else {
+                    echo '<div class="alert alert-danger" role="alert">Error.</div>';
+                }
+                break;
+
          case "Delete":
         
            if(deleteFootball($_POST['fid']))
