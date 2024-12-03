@@ -19,7 +19,7 @@
         <form method = "post" action = "">
              <div class="mb-3">
                <label for="cid<?php echo $playe['football_id']; ?>" class="form-label">Coach ID</label>
-               <input type="number" class="form-control" id="cid<?php echo $playe['football_id']; ?>" name = "cid" value = "<?php echo $playe['coaches_id']; ?>">
+               <input type="number" class="form-control" id="cid<?php echo $playe['football_id']; ?>" name = "cid" value = "<?php echo $playe['football_id']; ?>">
      
              </div>
              <div class="mb-3">
