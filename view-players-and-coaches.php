@@ -36,7 +36,7 @@ while ($coach = $coaches->fetch_assoc()) {
             </li>
             <li>
               <form method = "post" action = "">
-                <input type = "hidden" name = "division" value = "<?php echo $playe['divsion]; ?> >
+                <input type = "hidden" name = "fid" value = "<?php echo $playe['divsion]; ?> >
                <input type = "hidden" name ="actionType" value = "Delete">
                 <button type = "submit" class = "btn btn-primary"> 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
