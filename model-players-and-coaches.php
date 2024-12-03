@@ -17,14 +17,13 @@ function selectCoachesWithPlayers($pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("
-            SELECT c.coaches_id, 
-                c.coaches_name, 
-                c.office_location, 
+            SELECT f.football_id, 
                 f.nfl_team, 
-                f.division
-            FROM `coaches` c
-            JOIN `football` f ON f.coaches_id = c.coaches_id
-            WHERE f.players_id = ?
+                f.division,
+                c.office_location
+            FROM football f
+            JOIN coaches c ON f.coaches_id = c.coaches_id
+            WHERE c.coaches_id = ?
         ");
         $stmt->bind_param("i", $pid);
         $stmt->execute();
