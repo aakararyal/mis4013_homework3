@@ -32,7 +32,9 @@ while ($coach = $coaches->fetch_assoc()) {
       ?>
              <li class="list-group-item"><?php echo $playe['office_location']; ?> - <?php echo $playe['nfl_team']; ?> - <?php echo $playe['division']; ?> </li>
             
-            
+             <?php
+  include "view-players-and-coaches-editform.php";
+?>
               <form method = "post" action = "">
                 <input type = "hidden" name = "fid" value = "<?php echo $playe['football_id']; ?>" >
                <input type = "hidden" name ="actionType" value = "Delete">
