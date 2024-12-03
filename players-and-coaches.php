@@ -24,6 +24,15 @@ if (isset($_POST['actionType'])) {
                  echo '<div class = "alert alert-danger" role = "alert"> Error adding entry.</div>';
            }
                break;
+         case "Delete":
+        
+           if(deleteFootball($_POST['fid']))
+           {
+                echo '<div class = "alert alert-success" role = "alert"> Entry added.</div>';
+           } else {
+                 echo '<div class = "alert alert-danger" role = "alert"> Error adding entry.</div>';
+           }
+               break;
 }
 
 
