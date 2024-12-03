@@ -31,10 +31,8 @@ while ($coach = $coaches->fetch_assoc()) {
 
       ?>
              <li class="list-group-item"><?php echo $playe['office_location']; ?> - <?php echo $playe['nfl_team']; ?> - <?php echo $playe['division']; ?> </li>
-            <li>
-              
-            </li>
-            <li>
+            
+            
               <form method = "post" action = "">
                 <input type = "hidden" name = "fid" value = "<?php echo $playe['division']; ?>" >
                <input type = "hidden" name ="actionType" value = "Delete">
@@ -45,7 +43,7 @@ while ($coach = $coaches->fetch_assoc()) {
                       </svg>
                 </button>
                 </form>
-            </li>
+            
         <?php
       
     }
