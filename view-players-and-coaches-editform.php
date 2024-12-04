@@ -30,7 +30,7 @@
                <label for="pid<?php echo $playe['football_id']; ?>" class="form-label">Player</label>
 
              <?php 
-                  $playerList = selectedPlayersForInput();
+                  $playerList = selectPlayersForInput();
                   $selectedPlayer = $playe['players_id'];
                   include "view-players-input-list.php";
                     ?>
@@ -39,7 +39,7 @@
          <div class="mb-3">
                <label for="sid<?php echo $playe['football_id']; ?>" class="form-label">Stadium</label>
                   <?php 
-                  $stadiumList = selectedStadiumsForInput();
+                  $stadiumList = selectStadiumsForInput();
                   $selectedStadium = $playe['stadium_id'];
                   include "view-stadiums-input-list.php";
                     ?>
