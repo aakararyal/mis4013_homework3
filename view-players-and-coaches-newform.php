@@ -22,6 +22,7 @@
 
               <?php
               $coachList = selectCoachesForInput();
+              $selectedCoach = 0;
               include "view-coaches-input-list.php";
 
 ?>
