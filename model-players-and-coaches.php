@@ -46,8 +46,7 @@ function selectPlayersByCoach($cid) {
         $stmt = $conn->prepare("
             SELECT 
                 p.players_id, 
-                p.player_name, 
-                p.player_position 
+                p.player_name
             FROM `players` p
             JOIN `football` f ON f.players_id = p.players_id
             WHERE f.coaches_id = ?
@@ -97,7 +96,7 @@ function selectPlayersForInput() {
 function selectStadiumsForInput() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT  stadium_id, stadium_name, staidum_capacity FROM `stadiums` order by stadium_name");
+        $stmt = $conn->prepare("SELECT  stadium_id, stadium_name FROM `stadiums` order by stadium_name");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
