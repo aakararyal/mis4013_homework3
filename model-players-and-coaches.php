@@ -27,7 +27,7 @@ function selectCoachesWithPlayers($pid) {
                 c.office_location
             FROM football f
             JOIN coaches c ON f.coaches_id = c.coaches_id
-            WHERE c.coaches_id = ?
+            WHERE f.coaches_id = ?
         ");
         $stmt->bind_param("i", $pid);
         $stmt->execute();
