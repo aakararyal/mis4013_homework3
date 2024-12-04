@@ -8,7 +8,7 @@ while ($coachItem = $coachList->fetch_assoc()) {
       }
             
 ?>
-      <option value="<?php echo $coachItem['coaches_id']; ?>"<?><?=$selText?>>  <?php echo $coachItem['coaches_name']; ?>    </option>
+      <option value="<?php echo $coachItem['coaches_id']; ?>"<?php echo $selText; ?>><?php echo $coachItem['coaches_name']; ?>    </option>
   <?php
 }
 
