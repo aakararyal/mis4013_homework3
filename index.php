@@ -62,7 +62,7 @@ include "view-header.php";
                 },
                 title: {
                     display: true,
-                    text: 'Number of Coaches by Division'
+                    text: 'Number of Players by Division'
                 }
             }
         }
