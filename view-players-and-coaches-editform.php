@@ -18,17 +18,21 @@
       <div class="modal-body">
         <form method = "post" action = "">
              <div class="mb-3">
-               <label for="cid<?php echo $playe['football_id']; ?>" class="form-label">Coach ID</label>
-               <input type="number" class="form-control" id="cid<?php echo $playe['football_id']; ?>" name = "cid" value = "<?php echo $playe['coaches_id']; ?>">
-     
+               <label for="cid<?php echo $playe['football_id']; ?>" class="form-label">Coach</label>
+ <?php
+              $coachList = selectCoachesForInput();
+              $selectedCoach = $coach['coaches_id'];
+              include "view-coaches-input-list.php";
+
+?>     
              </div>
              <div class="mb-3">
-               <label for="pid<?php echo $playe['football_id']; ?>" class="form-label">Player ID</label>
+               <label for="pid<?php echo $playe['football_id']; ?>" class="form-label">Player</label>
                <input type="number" class="form-control" id="pid<?php echo $playe['football_id']; ?>" name = "pid" value = "<?php echo $playe['players_id']; ?>">
      
              </div>
          <div class="mb-3">
-               <label for="sid<?php echo $playe['football_id']; ?>" class="form-label">Stadium ID:</label>
+               <label for="sid<?php echo $playe['football_id']; ?>" class="form-label">Stadium</label>
                <input type="number" class="form-control" id="sid<?php echo $playe['football_id']; ?>" name = "sid" value = "<?php echo $playe['stadium_id']; ?>">
      
              </div>
