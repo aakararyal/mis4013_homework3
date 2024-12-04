@@ -19,8 +19,13 @@
         <form method = "post" action = "">
              <div class="mb-3">
                <label for="cid" class="form-label">Coach ID</label>
-               <input type="number" class="form-control" id="cid" name = "cid">
-     
+
+              <?php
+              $coachList = selectCoachesForInput();
+              include "view-coaches-input-list.php";
+
+?>
+              
              </div>
              <div class="mb-3">
                <label for="pid" class="form-label">Player ID</label>
