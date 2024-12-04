@@ -18,7 +18,11 @@ function selectCoachesWithPlayers($pid) {
         $conn = get_db_connection();
         $stmt = $conn->prepare("
             SELECT f.football_id, 
+                f.coaches_id,
+                f.players_id,
+                f.stadium_id,
                 f.nfl_team, 
+                f.seasons
                 f.division,
                 c.office_location
             FROM football f
