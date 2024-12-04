@@ -92,20 +92,6 @@ function selectCoachesForInput() {
     }
 }
 
-function selectCoachesForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT coaches_id, coaches_name FROM `coaches` order by coaches_name");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
 function selectPlayersForInput() {
     try {
         $conn = get_db_connection();
