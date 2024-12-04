@@ -28,13 +28,23 @@
              </div>
              <div class="mb-3">
                <label for="pid<?php echo $playe['football_id']; ?>" class="form-label">Player</label>
-               <input type="number" class="form-control" id="pid<?php echo $playe['football_id']; ?>" name = "pid" value = "<?php echo $playe['players_id']; ?>">
-     
+
+             <?php 
+                  $playerList = selectedPlayersForInput();
+                  $selectedPlayer = $playe['players_id'];
+                  include "view-players-input-list.php";
+                    ?>
+              
              </div>
          <div class="mb-3">
                <label for="sid<?php echo $playe['football_id']; ?>" class="form-label">Stadium</label>
-               <input type="number" class="form-control" id="sid<?php echo $playe['football_id']; ?>" name = "sid" value = "<?php echo $playe['stadium_id']; ?>">
-     
+                  <?php 
+                  $stadiumList = selectedStadiumsForInput();
+                  $selectedStadium = $playe['stadium_id'];
+                  include "view-stadiums-input-list.php";
+                    ?>
+                
+          
              </div>
          <div class="mb-3">
                <label for="nfl_team<?php echo $playe['football_id']; ?>" class="form-label">NFL Team:</label>
