@@ -82,7 +82,7 @@ function selectPlayersForInput() {
         $stmt = $conn->prepare("SELECT  p.players_id, 
                 p.player_name, 
                 p.player_position 
-            FROM `players` p order by p.playername");
+            FROM `players` p order by p.player_name");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
