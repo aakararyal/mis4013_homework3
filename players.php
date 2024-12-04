@@ -116,7 +116,6 @@ echo '<div class="container mt-3">
                         <div class="modal-body">
                             <p>Player Name: ' . $player['player_name'] . '</p>
                             <p>Position: ' . $player['player_position'] . '</p>
-                            <p>Team: </p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
