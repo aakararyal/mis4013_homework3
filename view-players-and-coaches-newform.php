@@ -30,13 +30,24 @@
              </div>
              <div class="mb-3">
                <label for="pid" class="form-label">Player ID</label>
-               <input type="number" class="form-control" id="pid" name = "pid">
+               
+
+              <?php
+              $playerList = selectPlayersForInput();
+              $selectedPlayer = 0;
+              include "view-players-input-list.php";
+
+?>
      
              </div>
          <div class="mb-3">
                <label for="sid" class="form-label">Stadium ID:</label>
-               <input type="number" class="form-control" id="sid" name = "sid">
-     
+<?php
+              $stadiumList = selectStadiumsForInput();
+              $selectedStadium = 0;
+              include "view-stadiums-input-list.php";
+
+?>     
              </div>
          <div class="mb-3">
                <label for="nfl_team" class="form-label">NFL Team:</label>
