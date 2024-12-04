@@ -9,7 +9,6 @@
         background-attachment: fixed;
         background-position: center;
         font-family: Arial, sans-serif;
-        color: #fff;
     }
 </style>
 
@@ -27,7 +26,8 @@ include "view-header.php";
   ?>
     <h1>Project</h1>
 
-<canvas id="divisionChart"></canvas>
+    <div style = "background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; width: 80%; margin: auto;">
+<canvas id="divisionChart"></canvas> </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     const ctx = document.getElementById('divisionChart').getContext('2d');
