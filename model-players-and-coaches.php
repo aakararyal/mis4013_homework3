@@ -40,6 +40,21 @@ function selectCoachesWithPlayers($pid) {
     }
 }
 
+function selectCoaches() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT coaches_id, coaches_name, office_location FROM `coaches`");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 function selectPlayersByCoach($cid) {
     try {
         $conn = get_db_connection();
@@ -62,6 +77,66 @@ function selectPlayersByCoach($cid) {
         throw $e;
     }
 }
+
+function selectCoachesForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT coaches_id, coaches_name FROM `coaches` order by coaches_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectCoachesForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT coaches_id, coaches_name FROM `coaches` order by coaches_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectPlayersForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT  p.players_id, 
+                p.player_name, 
+                p.player_position 
+            FROM `players` p order by p.playername");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectStadiumsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT  stadium_id, stadium_name, staidum_capacity FROM `stadiums` order by stadium_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 
 function selectStadiums() {
     try {
