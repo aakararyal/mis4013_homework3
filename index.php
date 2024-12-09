@@ -4,6 +4,8 @@
 <style>
     body {
         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDY1bPjndCB2lBOzONoSuCxg6pYe4AM9fTcw&s');
+        background-repeat: no repeat;
+        background-position: center;
     }
 </style>
 
