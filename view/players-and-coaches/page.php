@@ -5,7 +5,7 @@
 
   <div class = "col-auto">
      <?php
-  include "view-players-and-coaches-newform.php";
+  include "new-form.php";
 ?>
   </div>
   
@@ -52,7 +52,7 @@ while ($coach = $coaches->fetch_assoc()) {
                 </form>
             
              <?php
-  include "view-players-and-coaches-editform.php";
+  include "edit-form.php";
 ?>
              
         <?php
