@@ -66,7 +66,7 @@ if (isset($_POST['actionType'])) {
 
 }
 $coaches = selectCoaches();
-include "view-players-and-coaches.php";
+include "view/players-and-coaches/page.php";
 include "view-footer.php";
   ?>
 </body>
