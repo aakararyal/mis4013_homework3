@@ -27,7 +27,7 @@ document.body.style.backgroundColor = "lightblue";
 <?php
 
 require_once("util-db.php");
-require_once("model-players-and-coaches.php");
+require_once("model/players-and-coaches.php");
 
 
 $pageTitle = "Coaches and Former Player Teams";
