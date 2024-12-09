@@ -5,8 +5,8 @@ require_once("model-coaches-with-players.php");
 
 
 $pageTitle = "Coaches with Players";
-include "view-header.php";
+include "view/header.php";
 $coaches = selectCoachesWithPlayers($_GET['id']);
 include "view-coaches-with-players.php";
-include "view-footer.php";
+include "view/footer.php";
   ?>
