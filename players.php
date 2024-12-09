@@ -31,7 +31,7 @@ require_once("model-players.php");
 
 
 $pageTitle = "Players";
-include "view-header.php";
+include "view/header.php";
 
 
 if (isset($_POST['actionType'])) {
@@ -132,11 +132,10 @@ echo '<div class="container mt-3">
 
 
 
-include "view-footer.php";
+include "view/footer.php";
   ?>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Search Functionality Script -->
     <script>
         function searchPlayers() {
             let input = document.getElementById('playerSearch').value.toLowerCase();
