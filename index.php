@@ -1,3 +1,19 @@
+<html>
+<head>
+
+    <h1><b>Project</b></h1>
+    <style>
+        body {
+            background-image: url('https://cdn11.bigcommerce.com/s-jdhnct1/images/stencil/1280x1280/products/455/1218/football_stadium_horz__53833.1462478985.jpg?c=2');
+            background-position: center;
+            background-size: cover;
+            color: white; 
+            text-align: center;
+        }
+        
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 <?php
 
 require_once("util-db.php");
@@ -21,23 +37,7 @@ try {
 }
 ?>
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - NFL Division Chart</title>
-    <style>
-        body {
-            background-image: url('https://cdn11.bigcommerce.com/s-jdhnct1/images/stencil/1280x1280/products/455/1218/football_stadium_horz__53833.1462478985.jpg?c=2');
-            background-position: center;
-            background-size: cover;
-            color: white; 
-            text-align: center;
-        }
-        
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
+
 <body>
     <h1>NFL Division Chart</h1>
 
