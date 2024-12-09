@@ -18,7 +18,7 @@ require_once("model-players.php");
 
 
 $pageTitle = "Players";
-include "view-header.php";
+include "view/header.php";
 
 
 if (isset($_POST['actionType'])) {
@@ -58,7 +58,7 @@ echo '<div class = "alert alert-success" role = "alert"> Player edited.</div>"';
 
 $players = selectPlayers();
 include "view-players.php";
-include "view-footer.php";
+include "view/footer.php";
   ?>
 
 </body>
