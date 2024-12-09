@@ -3,6 +3,16 @@ function selectCoaches() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT coaches_id, coaches_name, office_location FROM `coaches` ");
+        if ($search) {
+            $newSearch .= " WHERE coaches_name LIKE ?";
+        }
+
+        $stmt = $conn->prepare($newSearch);
+
+        if ($search) {
+            $search = "%" . $search. "%";
+            $stmt->bind_param("s", $search);
+        }
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -17,7 +27,6 @@ function insertCoaches($coName, $coLocation) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO coaches (`coaches_name`, `office_location`) VALUES (?, ?)");
-        //INSERT INTO coaches (`coaches_name`, `office_location`) VALUES (?, ?);
         $stmt->bind_param("ss", $coName, $coLocation);
         $success = $stmt->execute();
         $conn->close();
