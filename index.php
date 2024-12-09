@@ -53,7 +53,7 @@ try {
         const data = [
             <?php foreach ($values as $value) {
                 echo "$value,"; 
-             } >?
+             } ?>
         ];
 
         
