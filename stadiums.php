@@ -30,7 +30,7 @@ require_once("model-stadiums.php");
 
 
 $pageTitle = "Stadiums";
-include "view-header.php";
+include "view/header.php";
 
 
 if (isset($_POST['actionType'])) 
@@ -64,7 +64,7 @@ if (isset($_POST['actionType']))
 
 $stadiums = selectStadiums();
 include "view-stadiums.php";
-include "view-footer.php";
+include "view/footer.php";
   ?>
 </body>
 </html>
