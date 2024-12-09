@@ -14,7 +14,7 @@ $query = "SELECT division, count(*) as count from football group by division"; /
  $result = $conn-> query($query);  // check to change
 
     while ($row = $result->fetch_assoc()) {
-        $labels[] = $row['divsion'];
+        $labels[] = $row['division'];
         $values[] = $row['count'];
     }
 
