@@ -128,7 +128,7 @@ echo '<div class="container mt-3">
 
 include "view/footer.php";
   ?>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
 
     <script>
         function searchPlayers() {
