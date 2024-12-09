@@ -19,14 +19,7 @@
    
 
 
-<td>
-    <a href="coaches-with-players.php? id = <?php echo $coach['coaches_id']; ?>"> View Players </a>
-    
-</td>
-    <form method = "GET">
-        <input type = "text" name = "search" placeholder = "Search Coaches " />
-        <button type = "submit">Search</button>
-    </form>
+
 <?php
 
 require_once("util-db.php");
