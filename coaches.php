@@ -36,7 +36,7 @@ require_once("model-coaches.php");
 
 
 $pageTitle = "Coaches";
-include "view-header.php";
+include "view/header.php";
 
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
@@ -65,7 +65,7 @@ case "Delete";
 }
 $coaches = selectCoaches();
 include "view-coaches.php";
-include "view-footer.php";
+include "view/footer.php";
   ?>
 </body>
 </html>
