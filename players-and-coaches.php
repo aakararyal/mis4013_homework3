@@ -31,7 +31,7 @@ require_once("model/players-and-coaches.php");
 
 
 $pageTitle = "Coaches and Former Player Teams";
-include "view-header.php";
+include "view/header.php";
 
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
@@ -67,7 +67,7 @@ if (isset($_POST['actionType'])) {
 }
 $coaches = selectCoaches();
 include "view/players-and-coaches/page.php";
-include "view-footer.php";
+include "view/footer.php";
   ?>
 </body>
 </html>
