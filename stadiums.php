@@ -10,6 +10,38 @@
     }
 </style>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+         #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f9f9f9;
+            padding: 12px;
+            font-size: 18px;
+            display: block;
+        }
+
+        #myUL li:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 
         
     </head>
@@ -60,8 +92,43 @@ if (isset($_POST['actionType']))
 }
 
 $stadiums = selectStadiums();
-include "view-stadiums.php";
-include "view/footer.php";
+include "view-stadiums.php"; ?>
+
+<h2>Filter by Name</h2>
+<input type="text" id="myInput" onkeyup="filterList()" placeholder="Search for stadiums...">
+<ul id="myUL">
+    <?php foreach ($stadiums as $stadium): ?>
+        <li>
+            <?= $stadium['stadium_name'] ?> - <?= $player['staidum_capacity'] ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
+<script>
+    // source https://www.w3schools.com/howto/howto_js_filter_lists.asp
+    function filterList() {
+        var input, filter, ul, li, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+
+        for (var i = 0; i < li.length; i++) {
+            txtValue = li[i].textContent || li[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+    
+
+
+
+
+
+<?php include "view/footer.php";
   ?>
 </body>
 </html>
