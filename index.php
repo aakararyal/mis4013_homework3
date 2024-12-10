@@ -48,18 +48,18 @@ try {
 <body>
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <canvas id="divisionChart" width="750" height="750" style = "max-width: 300px; maxheight: 300px; margin: auto;"></canvas>
+    <canvas id="divisionChart" width="750" height="750" style = "max-width: 300px; max-height: 300px; margin: auto;"></canvas>
 
     <script>
         const labels = [
             <?php foreach ($labels as $label) {
-                echo "'$label',"; 
+                echo "$label,"; 
             } ?>
         ];
 
         const data = [
             <?php foreach ($values as $value) {
-                echo "'$value',"; 
+                echo "$value,"; 
              } ?>
         ];
 
@@ -73,14 +73,14 @@ try {
                     label: 'Number of Players',
                     data: data,
                     backgroundColor: [
-                       'rgba(255, 99, 132)',
-                        'rgba(54, 162, 235)', 
-                        'rgba(255, 206, 86)', 
-                        'rgba(75, 192, 192)', 
-                        'rgba(153, 102, 255)', 
-                        'rgba(255, 159, 64)', 
-                        'rgba(128, 0, 128)', 
-                        'rgba(0, 128, 128)'  
+                       'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)', 
+                        'rgba(255, 206, 86, 0.6)', 
+                        'rgba(75, 192, 192, 0.6)', 
+                        'rgba(153, 102, 255, 0.6)', 
+                        'rgba(255, 159, 64, 0.6)', 
+                        'rgba(128, 0, 128, 0.6)', 
+                        'rgba(0, 128, 128, 0.6)'  
                         
                     ],
                     borderColor: [
@@ -90,14 +90,15 @@ try {
                 }]
             },
             options: {
-
-                x: {
-                    display: false
-                },
-                y: {
-                    display: false 
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: 'white'
+                        }
+                    }
                 }
-           
+            }
         });
     </script>
 </body>
