@@ -56,8 +56,8 @@ while ($coach = $coaches->fetch_assoc()) {
     
   </td>
     
-  <td> <a href = "coaches-with-players.php?id=<?php echo $coach['coaches_id']; ?>">NFL players from Coaches</td>
-  </tr>
+  <!-- <td> <a href = "coaches-with-players.php?id= < ?php echo $coach['coaches_id']; ?>">NFL players from Coaches</td> !-->
+  </tr> 
   <?php
 }
 ?>
