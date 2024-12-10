@@ -100,6 +100,6 @@ try {
         });
     </script>
 
-    <p><h2>The following chart displays the number of players in the table by division and will update as players are added, edited, or deleted.</h2></p>
+    <p>The following chart displays the number of players in the table by division and will update as players are added, edited, or deleted.</p>
 </body>
 </html>
