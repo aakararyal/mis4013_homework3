@@ -31,7 +31,7 @@ while ($coach = $coaches->fetch_assoc()) {
 
       ?>
              <li class="list-group-item">
-        Office Location: <?php echo $playe['office_location']; ?> <br>
+        College Location: <?php echo $playe['office_location']; ?> <br>
         NFL Team: <?php echo $playe['nfl_team']; ?> <br>
         Division: <?php echo $playe['division']; ?> <br>
         Seasons: <?php echo $playe['seasons']; ?> <br>
