@@ -9,7 +9,7 @@
             text-align: center;
     }
 </style>
-// source https://www.w3schools.com/howto/howto_js_filter_lists.asp
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
          #myInput {
@@ -87,9 +87,16 @@ include "view-coaches.php";
   ?>
 
 <h2>Coaches</h2>
-<input type="text" id="myInput" onkeyup="myFunction()">
+<input type="text" id="myInput" onkeyup="myFunction()" ">
+
+<ul id="myUL">
+    <?php foreach ($coaches as $coach): ?>
+        <li><?= $coach['coName'] ?> - <?= $coach['coLocation'] ?></li>
+    <?php endforeach; ?>
+</ul>
 
 <script>
+    // Source: https://www.w3schools.com/howto/howto_js_filter_lists.asp
     function myFunction() {
         var input, filter, ul, li, txtValue;
         input = document.getElementById("myInput");
@@ -108,7 +115,6 @@ include "view-coaches.php";
     }
 </script>
 
-<?php
-include "view/footer.php"; ?>
+<?php include "view/footer.php"; ?>
 </body>
 </html>
