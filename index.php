@@ -90,14 +90,14 @@ try {
                 }]
             },
             options: {
-           scales: {
+
                 x: {
                     display: false
                 },
                 y: {
                     display: false 
                 }
-           }
+           
         });
     </script>
 </body>
