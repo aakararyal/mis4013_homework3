@@ -6,7 +6,7 @@
       <tr>
         <th>ID</th>
       <th>Coach Name</th>
-      <th>Office Location</th>
+      <th>College Location</th>
          <th>NFL Team</th>
          <th>Division</th>
     </thead>
