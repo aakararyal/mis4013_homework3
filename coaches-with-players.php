@@ -15,7 +15,7 @@ require_once("util-db.php");
 require_once("model-coaches-with-players.php");
 
 
-$pageTitle = "Coaches with Players";
+$pageTitle = "Coaches and Player Locations";
 include "view/header.php";
 $coaches = selectCoachesWithPlayers($_GET['id']);
 include "view-coaches-with-players.php";
