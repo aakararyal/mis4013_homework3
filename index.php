@@ -37,15 +37,16 @@ try {
         $values[] = $row['count'];
     }
 
-    $conn->close();
+  
 } catch (Exception $e) {
-    echo '<p>Error fetching data: ' . $e->getMessage() . '</p>';
+  $conn->close();
+    throw $e;
 }
 ?>
 
 
 <body>
-   
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <canvas id="divisionChart" width="750" height="750" style = "max-width: 300px; maxheight: 300px; margin: auto;"></canvas>
 
@@ -58,7 +59,7 @@ try {
 
         const data = [
             <?php foreach ($values as $value) {
-                echo "$value,"; 
+                echo "'$value',"; 
              } ?>
         ];
 
@@ -72,7 +73,8 @@ try {
                     label: 'Number of Players',
                     data: data,
                     backgroundColor: [
-        
+                       
+                        
                     ],
                     borderColor: [
                         
