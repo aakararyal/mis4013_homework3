@@ -91,10 +91,11 @@ include "view-coaches.php";
 
 <ul id="myUL">
     <?php foreach ($coaches as $coach): ?>
-        <li><?= $coach['coName'] ?> - <?= $coach['coLocation'] ?></li>
+        <li>
+            <?= $coach['coName'] ?? 'N/A' ?> - <?= $coach['coLocation'] ?? 'N/A' ?>
+        </li>
     <?php endforeach; ?>
 </ul>
-
 <script>
     // Source: https://www.w3schools.com/howto/howto_js_filter_lists.asp
     function myFunction() {
