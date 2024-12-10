@@ -91,7 +91,7 @@ include "view-coaches.php";
 <ul id="myUL">
     <?php foreach ($coaches as $coach): ?>
         <li>
-            <?= $coach['coName'] ?> - <?= $coach['coLocation'] ?>
+            <?= $coach['coaches_name'] ?> - <?= $coach['office_location'] ?>
         </li>
     <?php endforeach; ?>
 </ul>
