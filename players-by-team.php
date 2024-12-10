@@ -8,6 +8,7 @@
             text-align: center;
     }
 </style>
+</head>
 <?php
 
 require_once("util-db.php");
