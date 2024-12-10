@@ -9,14 +9,10 @@
             text-align: center;
     }
 </style>
-
+// source https://www.w3schools.com/howto/howto_js_filter_lists.asp
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        #myInput {
+         #myInput {
             background-image: url('/css/searchicon.png');
             background-position: 10px 12px;
             background-repeat: no-repeat;
@@ -27,22 +23,23 @@
             margin-bottom: 12px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
 
-        table, th, td {
-            border: 1px solid black;
+        #myUL li {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f9f9f9;
+            padding: 12px;
+            font-size: 18px;
+            display: block;
         }
 
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f4f4f4;
+        #myUL li:hover {
+            background-color: #f1f1f1;
         }
     </style>
 </head>
@@ -86,7 +83,51 @@ case "Delete";
 }
 $coaches = selectCoaches();
 include "view-coaches.php";
-include "view/footer.php";
+
   ?>
+
+<h2>Coaches</h2>
+    <input type="text" id="myInput">
+
+    <ul id="myUL">
+        <?php foreach ($coaches as $coach) { ?>
+            <li>
+                <?php echo $coach['coName']; ?> - <?php echo $coach['coLocation']; ?>
+                <span class="actions">
+                    <form method="post" >
+                        <input type="hidden" name="coid" value="<?php echo $coach['coid']; ?>">
+                        <input type="hidden" name="actionType" value="Edit">
+                        <button type="submit">Edit</button>
+                    </form>
+                    <form method="post">
+                        <input type="hidden" name="coid" value="<?php echo $coach['coid']; ?>">
+                        <input type="hidden" name="actionType" value="Delete">
+                        <button type="submit">Delete</button>
+                    </form>
+                </span>
+            </li>
+        <?php
+                                           }
+?>
+    </ul>
+
+ <script>
+        function myFunction() {
+            var input, filter, ul, li, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    include "view/footer.php";
 </body>
 </html>
