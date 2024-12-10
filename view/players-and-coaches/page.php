@@ -35,7 +35,6 @@ while ($coach = $coaches->fetch_assoc()) {
         NFL Team: <?php echo $playe['nfl_team']; ?> <br>
         Division: <?php echo $playe['division']; ?> <br>
         Seasons: <?php echo $playe['seasons']; ?> <br>
-        Stadium ID: <?php echo $playe['stadium_id']; ?>
              </li>
              <form method = "post" action = "">
                 <input type = "hidden" name = "fid" value = "<?php echo $playe['football_id']; ?>" >
