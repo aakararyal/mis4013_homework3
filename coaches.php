@@ -87,47 +87,49 @@ include "view-coaches.php";
   ?>
 
 <h2>Coaches</h2>
-    <input type="text" id="myInput">
+<input type="text" id="myInput" onkeyup="myFunction()">
+<ul id="myUL">
+    <?php 
+foreach ($coaches as $coach):
+    ?>
+        <li>
+            <?= $coach['coName'] ?> - <?= $coach['coLocation'] ?>
+            <span class="actions">
+                <form method="post" >
+                    <input type="hidden" name="coid" value="<?= $coach['coid'] ?>">
+                    <input type="hidden" name="actionType" value="Edit">
+                    <button type="submit">Edit</button>
+                </form>
+                <form method="post" style="display:inline;">
+                    <input type="hidden" name="coid" value="<?= $coach['coid'] ?>">
+                    <input type="hidden" name="actionType" value="Delete">
+                    <button type="submit">Delete</button>
+                </form>
+            </span>
+        </li>
+    <?php endforeach; ?>
+</ul>
 
-    <ul id="myUL">
-        <?php foreach ($coaches as $coach) { ?>
-            <li>
-                <?php echo $coach['coName']; ?> - <?php echo $coach['coLocation']; ?>
-                <span class="actions">
-                    <form method="post" >
-                        <input type="hidden" name="coid" value="<?php echo $coach['coid']; ?>">
-                        <input type="hidden" name="actionType" value="Edit">
-                        <button type="submit">Edit</button>
-                    </form>
-                    <form method="post">
-                        <input type="hidden" name="coid" value="<?php echo $coach['coid']; ?>">
-                        <input type="hidden" name="actionType" value="Delete">
-                        <button type="submit">Delete</button>
-                    </form>
-                </span>
-            </li>
-        <?php
-                                           }
-?>
-    </ul>
+<script>
+    function myFunction() {
+        var input, filter, ul, li, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
 
- <script>
-        function myFunction() {
-            var input, filter, ul, li, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                txtValue = li[i].textContent || li[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
+        for (var i = 0; i < li.length; i++) {
+            txtValue = li[i].textContent || li[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
             }
         }
-    </script>
-    include "view/footer.php";
+    }
+</script>
+
+<?php
+include "view/footer.php"; ?>
 </body>
 </html>
