@@ -89,6 +89,7 @@ try {
                     borderWidth: 1
                 }]
             },
+            options: {
            scales: {
                 x: {
                     display: false
@@ -96,6 +97,7 @@ try {
                 y: {
                     display: false 
                 }
+           }
         });
     </script>
 </body>
