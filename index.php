@@ -47,7 +47,7 @@ try {
 <body>
     <h1>NFL Division Chart</h1>
 
-    <canvas id="divisionChart" width="150" height="150" style = "max-width: 300px; maxheight: 300px; margin: auto;"></canvas>
+    <canvas id="divisionChart" width="250" height="250" style = "max-width: 300px; maxheight: 300px; margin: auto;"></canvas>
 
     <script>
         const labels = [
