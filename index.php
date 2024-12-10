@@ -73,7 +73,14 @@ try {
                     label: 'Number of Players',
                     data: data,
                     backgroundColor: [
-                       
+                       'rgba(255, 99, 132)',
+                        'rgba(54, 162, 235)', 
+                        'rgba(255, 206, 86)', 
+                        'rgba(75, 192, 192)', 
+                        'rgba(153, 102, 255)', 
+                        'rgba(255, 159, 64)', 
+                        'rgba(128, 0, 128)', 
+                        'rgba(0, 128, 128)'  
                         
                     ],
                     borderColor: [
@@ -82,7 +89,13 @@ try {
                     borderWidth: 1
                 }]
             },
-          
+           options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
         });
     </script>
 </body>
