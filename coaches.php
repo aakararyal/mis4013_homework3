@@ -86,7 +86,7 @@ include "view-coaches.php";
 
   ?>
 
-<h2>Coaches</h2>
+<h2>Filter by Name</h2>
 <input type="text" id="myInput" onkeyup="filterList()" placeholder="Search for coaches...">
 <ul id="myUL">
     <?php foreach ($coaches as $coach): ?>
