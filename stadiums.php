@@ -99,7 +99,7 @@ include "view-stadiums.php"; ?>
 <ul id="myUL">
     <?php foreach ($stadiums as $stadium): ?>
         <li>
-            <?= $stadium['stadium_name'] ?> - <?= $player['staidum_capacity'] ?>
+            <?= $stadium['stadium_name'] ?> - <?= $stadium['staidum_capacity'] ?>
         </li>
     <?php endforeach; ?>
 </ul>
