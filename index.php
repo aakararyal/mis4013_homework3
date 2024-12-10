@@ -14,7 +14,7 @@
 $pageTitle = "Home";
 include "view/header.php";
   ?>
-    <h1>Homework 4</h1>
+     <h1>NFL Division Chart</h1>
    <?php
   include "view/footer.php";
   ?>
@@ -45,7 +45,7 @@ try {
 
 
 <body>
-    <h1>NFL Division Chart</h1>
+   
 
     <canvas id="divisionChart" width="750" height="750" style = "max-width: 300px; maxheight: 300px; margin: auto;"></canvas>
 
