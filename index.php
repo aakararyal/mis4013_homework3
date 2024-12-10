@@ -89,13 +89,13 @@ try {
                     borderWidth: 1
                 }]
             },
-           options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
+           scales: {
+                x: {
+                    display: false
+                },
+                y: {
+                    display: false 
+                }
         });
     </script>
 </body>
