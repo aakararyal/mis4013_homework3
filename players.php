@@ -97,7 +97,7 @@ include "view-players.php"; ?>
 <ul id="myUL">
     <?php foreach ($players as $player): ?>
         <li>
-            <?= $player['player_name'] ?> - <?= $coach['player_position'] ?>
+            <?= $player['player_name'] ?> - <?= $player['player_position'] ?>
         </li>
     <?php endforeach; ?>
 </ul>
