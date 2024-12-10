@@ -88,27 +88,6 @@ include "view-coaches.php";
 
 <h2>Coaches</h2>
 <input type="text" id="myInput" onkeyup="myFunction()">
-<ul id="myUL">
-    <?php 
-foreach ($coaches as $coach):
-    ?>
-        <li>
-            <?= $coach['coName'] ?> - <?= $coach['coLocation'] ?>
-            <span class="actions">
-                <form method="post" >
-                    <input type="hidden" name="coid" value="<?= $coach['coid'] ?>">
-                    <input type="hidden" name="actionType" value="Edit">
-                    <button type="submit">Edit</button>
-                </form>
-                <form method="post" style="display:inline;">
-                    <input type="hidden" name="coid" value="<?= $coach['coid'] ?>">
-                    <input type="hidden" name="actionType" value="Delete">
-                    <button type="submit">Delete</button>
-                </form>
-            </span>
-        </li>
-    <?php endforeach; ?>
-</ul>
 
 <script>
     function myFunction() {
