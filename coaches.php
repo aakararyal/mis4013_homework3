@@ -87,18 +87,17 @@ include "view-coaches.php";
   ?>
 
 <h2>Coaches</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" ">
-
+<input type="text" id="myInput" onkeyup="filterList()" placeholder="Search for coaches...">
 <ul id="myUL">
     <?php foreach ($coaches as $coach): ?>
         <li>
-            <?= $coach['coName'] ?? 'N/A' ?> - <?= $coach['coLocation'] ?? 'N/A' ?>
+            <?= $coach['coName'] ?> - <?= $coach['coLocation'] ?>
         </li>
     <?php endforeach; ?>
 </ul>
 <script>
-    // Source: https://www.w3schools.com/howto/howto_js_filter_lists.asp
-    function myFunction() {
+    // source https://www.w3schools.com/howto/howto_js_filter_lists.asp
+    function filterList() {
         var input, filter, ul, li, txtValue;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
